@@ -1,0 +1,49 @@
+'use client'
+
+import { motion } from "framer-motion"
+import Header from "./Header"
+import Image from "next/image"
+
+export default function Hero() {
+  return (
+    <section className="h-screen flex flex-col bg-white text-black items-center">
+      <div className="min-h-24 w-full"></div>
+      <div className="flex h-full flex-col justify-center container items-center mb-12 lg:flex-row">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-center px-4 py-4 lg:text-start lg:w-5/12"
+        >
+          <h1 className="text-4xl lg:text-4xl/12 xl:text-5xl/14 font-black mb-4">O que importa na vida em um só cartão.</h1>
+          <p className="font-light text-xl xl:text-2xl/10 text-zinc-800 mb-6">
+            Você é servidor público, aposentado ou
+            pensionista do INSS? Tenha tudo o que
+            importa na vida em um só cartão aceito
+            em milhares de estabelecimentos
+            espalhados pelo País.
+          </p>
+          <button className="bg-black text-white font-semibold px-6 py-2 xl:py-4 xl:px-12 rounded-lg hover:bg-gray-100 transition">
+            Saiba Mais
+          </button>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5 }}
+          className="flex flex-col items-center xl:w-7/12"
+        >
+          <div className="relative flex w-[400px] h-[400px] lg:w-[450px] xl:w-full">
+            <Image  
+              src="/images/cartao_capa.png"
+              alt="Imagem do cartao"
+              fill={true}
+              objectFit="cover"
+            />
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
