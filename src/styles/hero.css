@@ -2,3 +2,19 @@
   background-image: url("/public/images/cartao_capa.png");
   background-repeat: no-repeat;
 }
+
+.element {
+  background-image: url('../../public/images/bg_hero.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 64% 50%;
+}
+
+@media(max-width: 1024px) {
+  .element {
+    background-image: url('../../public/images/bg_hero.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+  }
+}

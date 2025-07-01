@@ -1,14 +1,35 @@
 'use client'
 
+import { useEffect, useState } from "react"
+
 import { motion } from "framer-motion"
 import Header from "./Header"
 import Image from "next/image"
+import '@/styles/hero.css'
 
 export default function Hero() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 1024); // lg = 1024px
+    };
+
+    checkScreenSize(); // inicial
+    window.addEventListener('resize', checkScreenSize); // escuta resize
+
+    return () => window.removeEventListener('resize', checkScreenSize); // limpa
+  }, []);
+
   return (
     <section className="h-screen flex flex-col bg-white text-black items-center">
-      <div className="min-h-24 w-full"></div>
-      <div className="flex h-full flex-col justify-center container items-center mb-12 lg:flex-row">
+      <div className="min-h-18 w-full"></div>
+      <motion.div 
+        className={`${!isMobile && 'element'} flex h-full flex-col justify-center container items-center mb-12 lg:flex-row`}
+        initial={{ opacity: 0}}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
@@ -32,9 +53,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5 }}
-          className="flex flex-col items-center xl:w-7/12"
+          className="flex flex-col items-center w-full lg:w-7/12"
         >
-          <div className="relative flex w-[400px] h-[400px] lg:w-[450px] xl:w-full">
+          <div 
+            className={`relative flex w-full h-[320px] lg:w-[550px] lg:h-[450px] xl:w-full`}
+          >
             <Image  
               src="/images/cartao_capa.png"
               alt="Imagem do cartao"
@@ -43,7 +66,7 @@ export default function Hero() {
             />
           </div>
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   )
 }

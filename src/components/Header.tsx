@@ -1,6 +1,7 @@
 'use client'
 
 import '@/styles/header.css'
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Header() {
@@ -9,20 +10,25 @@ export default function Header() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <div className="flex w-full justify-center bg-white text-black border-b fixed">
-      <div className="flex items-center w-full min-h-24 mx-4 lg:mx-12 flex-row">
-        <div className="flex flex-col w-2/12">
-          logo
+    <div className="flex w-full justify-center bg-white text-black border-b fixed z-50 shadow-xl/30 shadow-white">
+      <div className="flex items-center w-full min-h-18 mx-4 lg:mx-12 flex-row">
+        <div className="relative flex flex-col h-full w-4/12 lg:w-2/12 justify-center">
+          <img 
+            src="/images/logo.png"
+            alt='Logo Apus'
+            className='absolute'
+            style={{}}
+          />
         </div>
 
-       <nav className="hidden lg:flex w-8/12 justify-center">
+        <nav className="hidden lg:flex w-6/12 lg:w-8/12 justify-center">
           <ul className="flex gap-2">
-            <li className="text-base font-normal lg:text-lg px-3"><a href="">Produtos</a></li>
-            <li className="text-base font-normal lg:text-lg px-3"><a href="">Benefícios</a></li>
-            <li className="text-base font-normal lg:text-lg px-3"><a href="">Sobre cartão</a></li>
-            <li className="text-base font-normal lg:text-lg px-3"><a href="">Sobre Nós</a></li>
-            <li className="text-base font-normal lg:text-lg px-3"><a href="">Ajuda</a></li>
-            <li className="text-base font-normal lg:text-lg px-3"><a href="">Blog</a></li>
+            <li className="text-base font-normal lg:text-md px-3"><a href="">Produtos</a></li>
+            <li className="text-base font-normal lg:text-md px-3"><a href="">Benefícios</a></li>
+            <li className="text-base font-normal lg:text-md px-3"><a href="">Sobre cartão</a></li>
+            <li className="text-base font-normal lg:text-md px-3"><a href="">Sobre Nós</a></li>
+            <li className="text-base font-normal lg:text-md px-3"><a href="">Ajuda</a></li>
+            <li className="text-base font-normal lg:text-md px-3"><a href="">Blog</a></li>
           </ul>
         </nav>
 
