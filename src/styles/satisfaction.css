@@ -1,0 +1,33 @@
+.image-bg {
+  background-image: url('../../public/images/arraow_right.png'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.image-casal {
+  background-image: url('../../public/images/casal_image.png'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.arrow {
+  position: absolute;
+  bottom: -38%;
+  left: -165px;
+  transform: rotate(152deg);
+  height: 100%;
+}
+
+@media(min-width: 1024px) {
+  .image-bg {
+    background-size: 120%;
+    background-position: 50% 75%;
+  }
+
+  .image-casal {
+    background-size: 150%;
+    background-position: 0% 100%;
+  }
+}
