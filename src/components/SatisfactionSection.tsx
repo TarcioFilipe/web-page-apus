@@ -20,11 +20,11 @@ export default function SatisfactionSection() {
             transition={{ duration: 0.6 }}
             className="p-4 text-center lg:text-left"
           >
-            <h1 className="text-3xl lg:text-4xl/12 xl:text-5xl/14 font-black mb-4">
+            <h1 className="text-3xl lg:text-4xl/12 2xl:text-5xl/14 font-black mb-4">
               Mais de 3 milhões de usuários satisfeitos
             </h1>
 
-            <p className="font-light text-md w-8/12 lg:w-full xl:text-2xl/10 text-zinc-800 mb-6">
+            <p className="font-light text-md w-8/12 lg:w-full xl:text-lg/8 text-zinc-800 mb-6">
               Lorem ipsum dolor sit amet,
               consectetuer adipiscing elit, sed diam
               nonummy nibh euismod tincidunt ut

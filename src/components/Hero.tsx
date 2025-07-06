@@ -36,8 +36,8 @@ export default function Hero() {
           transition={{ duration: 1 }}
           className="flex flex-col text-center px-4 py-4 items-center lg:text-start lg:w-5/12"
         >
-          <h1 className="text-3xl lg:text-4xl/12 xl:text-5xl/14 font-black mb-4">O que importa na vida em um só cartão.</h1>
-          <p className="font-light text-md w-8/12 lg:w-full xl:text-2xl/10 text-zinc-800 mb-6">
+          <h1 className="text-3xl lg:text-4xl/12 2xl:text-5xl/14 font-black mb-4">O que importa na vida em um só cartão.</h1>
+          <p className="font-light text-md w-8/12 lg:w-full xl:text-lg/8 text-zinc-800 mb-6">
             Você é servidor público, aposentado ou
             pensionista do INSS? Tenha tudo o que
             importa na vida em um só cartão aceito

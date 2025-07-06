@@ -10,13 +10,13 @@ export default function Header() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <div className="flex w-full justify-center bg-white text-black border-b fixed z-50 shadow-xl/30 shadow-white">
+    <div className="flex w-full justify-center bg-white text-black border-b border-zinc-800 fixed z-50 shadow-xl/30 shadow-white">
       <div className="flex items-center w-full min-h-18 mx-4 lg:mx-12 flex-row">
         <div className="relative flex flex-col h-full w-4/12 lg:w-2/12 justify-center">
           <img 
             src="/images/logo.png"
             alt='Logo Apus'
-            className='absolute'
+            className='absolute logo'
             style={{}}
           />
         </div>

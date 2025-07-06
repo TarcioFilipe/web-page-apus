@@ -3,6 +3,7 @@
 import BenefitsSection from "@/components/BenefitsSection";
 import Hero from "@/components/Hero";
 import SatisfactionSection from "@/components/SatisfactionSection";
+import SecuritySection from "@/components/SecuritySection";
 import VideoSection from "@/components/VideoSection";
 import Image from "next/image";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <VideoSection/>
       <SatisfactionSection/>
       <BenefitsSection/>
+      <SecuritySection/>
     </>
   );
 }

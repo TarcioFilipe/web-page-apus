@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mdi/js": "^7.4.47",
+    "@mdi/react": "^1.6.1",
     "framer-motion": "^12.19.2",
     "motion": "^12.19.2",
     "next": "15.3.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "swiper": "^11.2.10"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
