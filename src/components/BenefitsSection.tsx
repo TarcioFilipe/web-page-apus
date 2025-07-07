@@ -25,7 +25,7 @@ export default function BenefitsSection() {
         <p className='text-center xl:max-w-6xl text-3xl lg:text-4xl/12 2xl:text-5xl/14 font-black mb-4'>
           O cartão de benefícios especialista em resolver. Entenda por que o Apus digital é considerado o melhor:
         </p>
-        <div className="container max-w-full mx-auto px-4 mt-10">
+        <div className="container max-w-full mx-auto mt-10">
           <Swiper
             slidesPerView={'auto'}  
             spaceBetween={0}

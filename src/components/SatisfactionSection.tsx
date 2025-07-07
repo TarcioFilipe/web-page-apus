@@ -4,7 +4,7 @@ import '@/styles/satisfaction.css'
 
 export default function SatisfactionSection() {
   return (
-    <section className="relative h-screen w-full flex flex-col pt-20 bg-white items-center text-black">
+    <section className="relative h-screen w-full flex flex-col pt-20 bg-white items-center text-black overflow-hidden">
       <Image  
         src="/images/arraow_right.png"
         alt="Imagem do cartao"
@@ -24,7 +24,7 @@ export default function SatisfactionSection() {
               Mais de 3 milhões de usuários satisfeitos
             </h1>
 
-            <p className="font-light text-md w-8/12 lg:w-full xl:text-lg/8 text-zinc-800 mb-6">
+            <p className="w-full font-light text-md lg:w-full xl:text-lg/8 text-zinc-800 mb-6">
               Lorem ipsum dolor sit amet,
               consectetuer adipiscing elit, sed diam
               nonummy nibh euismod tincidunt ut
@@ -34,7 +34,7 @@ export default function SatisfactionSection() {
             </p>
           </motion.div>
         </div>
-        <div className="image-bg flex flex-col relative w-full h-[40%] lg:h-full lg:w-7/12">
+        <div className="image-bg flex flex-col relative w-full h-[60%] lg:h-full lg:w-7/12">
           <motion.div 
             initial={{ opacity: 0, y: 40}}
             whileInView={{ opacity: 1, y: 0}}

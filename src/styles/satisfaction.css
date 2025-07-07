@@ -7,9 +7,9 @@
 
 .image-casal {
   background-image: url('../../public/images/casal_image.png'); 
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: 10% 100%;
 }
 
 .arrow {

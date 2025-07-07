@@ -2,6 +2,7 @@
 
 import BenefitsSection from "@/components/BenefitsSection";
 import Hero from "@/components/Hero";
+import SaqueFacil from "@/components/SaqueFacil";
 import SatisfactionSection from "@/components/SatisfactionSection";
 import SecuritySection from "@/components/SecuritySection";
 import VideoSection from "@/components/VideoSection";
@@ -15,6 +16,7 @@ export default function Home() {
       <SatisfactionSection/>
       <BenefitsSection/>
       <SecuritySection/>
+      <SaqueFacil/>
     </>
   );
 }

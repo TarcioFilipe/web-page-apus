@@ -1,0 +1,18 @@
+.imageCard {
+  background-image: url("/public/images/cartao_capa.png");
+  background-repeat: no-repeat;
+}
+
+.element-security {
+  background-image: url('../../public/images/bg_hero.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 32% 50%
+}
+
+@media(min-width: 1024px) {
+  .element-security {
+    background-position: 64% 50%;
+    background-size: 132%;
+  }
+}
