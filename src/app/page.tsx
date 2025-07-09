@@ -1,11 +1,12 @@
 'use client'
 
-import BenefitsSection from "@/components/BenefitsSection";
-import Hero from "@/components/Hero";
-import SaqueFacil from "@/components/SaqueFacil";
-import SatisfactionSection from "@/components/SatisfactionSection";
-import SecuritySection from "@/components/SecuritySection";
-import VideoSection from "@/components/VideoSection";
+import BenefitsSection from "@/components/Sections/BenefitsSection";
+import FaqSection from "@/components/Sections/FaqSection";
+import Hero from "@/components/Sections/Hero";
+import SaqueFacil from "@/components/Sections/SaqueFacil";
+import SatisfactionSection from "@/components/Sections/SatisfactionSection";
+import SecuritySection from "@/components/Sections/SecuritySection";
+import VideoSection from "@/components/Sections/VideoSection";
 import Image from "next/image";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <BenefitsSection/>
       <SecuritySection/>
       <SaqueFacil/>
+      <FaqSection/>
     </>
   );
 }

@@ -1,0 +1,22 @@
+.image-idosos {
+    background-image: url('../../public/images/idosos.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+@media(min-width: 1024px) {
+  .image-idosos {
+    background-image: url('../../public/images/idosos.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 64% 100%;
+  }
+}
+
+@media(min-width: 1440px) {
+  .image-idosos {
+    background-image: url('../../public/images/idosos.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
