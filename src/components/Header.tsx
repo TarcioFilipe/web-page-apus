@@ -23,7 +23,7 @@ export default function Header() {
 
         <nav className="hidden lg:flex w-6/12 lg:w-8/12 justify-center">
           <ul className="flex gap-2">
-            <li className="text-base font-normal lg:text-md px-3"><a href="">Produtos</a></li>
+            <li className="text-base font-normal lg:text-md px-3"><a href="/Products">Produtos</a></li>
             <li className="text-base font-normal lg:text-md px-3"><a href="">Benefícios</a></li>
             <li className="text-base font-normal lg:text-md px-3"><a href="">Sobre cartão</a></li>
             <li className="text-base font-normal lg:text-md px-3"><a href="">Sobre Nós</a></li>
@@ -55,7 +55,7 @@ export default function Header() {
           
             {menuOpen && (
               <div className="absolute top-20 left-0 w-full bg-white text-black flex flex-col items-center gap-4 py-6 z-50 lg:hidden shadow-md">
-                <a href="" className="menuItem">Produtos</a>
+                <a href="/Products" className="menuItem">Produtos</a>
                 <a href="" className="menuItem">Benefícios</a>
                 <a href="" className="menuItem">Sobre cartão</a>
                 <a href="" className="menuItem">Sobre Nós</a>

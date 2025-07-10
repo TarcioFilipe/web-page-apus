@@ -1,0 +1,32 @@
+
+.arrowTop {
+  top: -200px;
+  right: -120px;
+  transform: rotate(90deg);
+}
+
+.arrowBottom {
+  bottom: -130px;
+  left: -228px;
+  transform: rotate(49deg);
+}
+
+@media(min-width: 1024px) {
+  .arrowTop {
+    top: -400px;
+    right: -320px;
+  }
+
+  .arrowBottom {
+    bottom: -446px;
+    left: -400px;
+    transform: rotate(379deg);
+  }
+}
+
+/* @media (min-width: 1920px) {
+  .arrowBottom {
+    bottom: -446px;
+    left: -400px;
+  }
+} */

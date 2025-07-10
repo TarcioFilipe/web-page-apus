@@ -1,0 +1,32 @@
+.imageElement {
+  background-image: url('../../public/images/welcome.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 74% 100%;
+}
+
+.arrowElement {
+  bottom: -130px;
+  left: -228px;
+  transform: rotate(49deg);
+}
+
+@media(min-width: 1024px) {
+  .imageElement {
+    background-image: url('../../public/images/welcome.jpg');
+    
+  }
+
+  .arrowElement {
+    bottom: -57%;
+    left: -39%;
+    transform: rotate(379deg);
+  }
+}
+
+@media (min-width: 1920px) {
+  .arrowElement {
+    bottom: -41%;
+    left: -36%;
+  }
+}
