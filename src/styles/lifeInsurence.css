@@ -1,0 +1,40 @@
+.image-bg-life {
+  background-image: url('../../public/images/arraow_right.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.image-idosa {
+  background-image: url('../../public/images/lifeInsurence.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 78% 100%;
+}
+
+.arrow {
+  position: absolute;
+  bottom: -38%;
+  left: -170px;
+  transform: rotate(152deg);
+  height: 100%;
+}
+
+@media (min-width: 786px) {
+  .image-bg-life {
+    background-size: contain;
+  }
+
+}
+
+@media(min-width: 1024px) {
+  .image-bg-life {
+    background-size: 120%;
+    background-position: 50% 75%;
+  }
+
+  .image-idosa {
+    background-size: 150%;
+    background-position: 75% 100%;
+  }
+}

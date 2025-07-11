@@ -1,0 +1,12 @@
+.imageCard {
+  bottom: 0px;
+}
+
+@media (min-width: 1024px) {
+  .imageCard {
+    bottom: 50%;
+    top: 50%;
+    transform: translateY(-72%);
+    right: 0px;
+  }
+}

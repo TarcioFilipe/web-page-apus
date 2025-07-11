@@ -1,0 +1,17 @@
+.arrowTop {
+  top: -200px;
+  right: -120px;
+  transform: rotate(90deg);
+}
+
+.imageCell {
+  transform: rotate(342deg) !important;
+}
+
+
+@media(min-width: 1024px) {
+  .arrowTop {
+    top: -400px;
+    right: -320px;
+  }
+}
