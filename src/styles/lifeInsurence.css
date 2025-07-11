@@ -20,9 +20,20 @@
   height: 100%;
 }
 
+.arrowBottomRight {
+  bottom: -130px;
+  right: -228px;
+  transform: rotate(49deg);
+}
+
 @media (min-width: 786px) {
   .image-bg-life {
     background-size: contain;
+  }
+
+  .image-idosa {
+    background-size: contain;
+    background-position: 53% 100%;
   }
 
 }
@@ -36,5 +47,11 @@
   .image-idosa {
     background-size: 150%;
     background-position: 75% 100%;
+  }
+
+  .arrowBottomRight {
+    bottom: -451px;
+    right: -270px;
+    transform: rotate(202deg);
   }
 }

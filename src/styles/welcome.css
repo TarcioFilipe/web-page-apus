@@ -18,15 +18,21 @@
   }
 
   .arrowElement {
-    bottom: -57%;
-    left: -39%;
-    transform: rotate(379deg);
+    bottom: -431px;
+    left: -500px;
+    transform: rotate(32deg);
   }
 }
 
-@media (min-width: 1920px) {
+@media(min-width: 1740px) {
+  .arrowElement {
+    left: -610px;
+  }
+}
+
+/* @media (min-width: 1920px) {
   .arrowElement {
     bottom: -41%;
     left: -36%;
   }
-}
+} */
