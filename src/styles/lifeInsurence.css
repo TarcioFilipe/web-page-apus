@@ -26,6 +26,17 @@
   transform: rotate(49deg);
 }
 
+@media (min-width: 640px) {
+  .image-bg-life {
+    background-size: contain;
+  }
+
+  .image-idosa {
+    background-size: 70%;
+    background-position: 38% 100%;
+  }
+}
+
 @media (min-width: 786px) {
   .image-bg-life {
     background-size: contain;

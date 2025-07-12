@@ -20,19 +20,19 @@ export default function LifeInsurance() {
             initial={{ opacity: 0, y: 60}}
             whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
-            className="flex flex-col p-4 text-center items-center lg:text-left"
+            className="flex flex-col p-4 text-center items-center lg:items-start lg:text-left"
           >
-            <h1 className="text-3xl lg:text-4xl/12 2xl:text-5xl/14 font-black mb-4">
+            <p className="text-3xl lg:text-4xl/12 2xl:text-5xl/14 font-black mb-4 lg:mb-8">
               Seguro de vida
-            </h1>
+            </p>
 
-            <p className="w-10/12 font-light text-md lg:w-full xl:text-lg/8 2xl:text-2xl text-zinc-800 mb-6">
+            <p className="w-10/12 font-light text-md lg:w-full lg:text-lg/8 xl:text-2xl 2xl:text-3xl text-zinc-800 mb-6">
               A forma de cuidar de quem você ama
-              está aqui. Com o Seguro de Vida <span className="font-bold">APUS</span>
-              digital, você garante tranquilidade e
+              está aqui. Com o Seguro de Vida <span className="font-bold">APUS digital </span>
+              , você garante tranquilidade e
               segurança para o futuro da sua família.
             </p>
-            <p className="w-10/12 font-light text-md lg:w-full xl:text-lg/8 2xl:text-2xl text-zinc-800 mb-6">
+            <p className="w-10/12 font-light text-md lg:w-full lg:text-lg/8 xl:text-2xl 2xl:text-3xl text-zinc-800 mb-6">
               Ao longo do contrato, todo o patrimônio
               acumulado é destinado aos beneficiários
               indicados, assegurando que os frutos do
