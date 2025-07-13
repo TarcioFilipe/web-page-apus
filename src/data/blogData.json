@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Quem tem a Tag APUS by Veloe pode usar o novo sistema de pedágio sem cancela Free Flow",
+    "excerpt": "Vai pegar estrada no feriado? Além de diversos benefícios, a Tag apus permite passar direto no pedágio e ainda dá desconto na tarifa.",
+    "image": "/images/freeflow.jpg"
+  },
+  {
+    "id": 2,
+    "title": "APUS lança app com novas funcionalidades para o usuário",
+    "excerpt": "Agora ficou ainda mais fácil controlar sua tag e benefícios pelo celular.",
+    "image": "/images/app-lancamento.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Nova parceria da APUS com postos de combustível no Brasil",
+    "excerpt": "Clientes terão mais descontos e vantagens em postos parceiros.",
+    "image": "/images/parceria.jpg"
+  }
+]

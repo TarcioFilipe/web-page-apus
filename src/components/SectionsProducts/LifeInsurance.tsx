@@ -10,10 +10,9 @@ export default function LifeInsurance() {
   return (
     <section className="relative h-screen w-full flex flex-col bg-white items-center text-black overflow-hidden lg:h-[512px] xl:h-[640px] 2xl:h-[786px]">
       <div className="flex flex-col container w-full h-full lg:flex-row-reverse">
-        <div className='arrowBottomRight absolute w-[400px] h-[400px] lg:w-[800px] lg:h-[800px]' >
+        <div className='arrowBottomRight absolute w-[400px] h-[400px] lg:w-[800px] lg:h-[800px]'>
           <Image src="/images/arraow_right.png" alt='Arrow right' fill objectFit='cover'/>
         </div>
-
 
         <div className="flex flex-col w-full h-[40%] lg:h-full lg:justify-center lg:w-6/12">
           <motion.div

@@ -1,0 +1,26 @@
+.imageUs {
+  bottom: 0px
+}
+
+.arrowUs {
+  bottom: 18%;
+  left: -3%;
+}
+
+@media(min-width: 786px) {
+  .arrowUs {
+    left: 0%
+  }
+}
+
+@media(min-width: 1024px) {
+  .imageUs {
+    right: 0px;
+  }
+
+  .arrowUs {
+    left: auto;
+    right: auto;
+  }
+}
+

@@ -1,13 +1,28 @@
 'use client'
 
-import '@/styles/header.css'
+import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { motion } from 'framer-motion';
+
 import Image from 'next/image';
-import { useState } from 'react';
+import Link from 'next/link';
+import '@/styles/header.css';
 
 export default function Header() {
+  console.log('renderiza')
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  const links = [
+    { label: 'Produtos', href: '/Products' },
+    { label: 'Benefícios', href: '/Beneficios' },
+    { label: 'Sobre cartão', href: '/Sobre-cartao' },
+    { label: 'Sobre Nós', href: '/AboutUs' },
+    { label: 'Ajuda', href: '/Help' },
+    { label: 'Blog', href: '/Blog' },
+  ];
 
   return (
     <div className="flex w-full justify-center bg-white text-black border-b border-zinc-800 fixed z-50 shadow-xl/30 shadow-white">
@@ -21,19 +36,40 @@ export default function Header() {
           />
         </div>
 
-        <nav className="hidden lg:flex w-6/12 lg:w-8/12 justify-center">
-          <ul className="flex gap-2">
-            <li className="text-base font-normal lg:text-md px-3"><a href="/Products">Produtos</a></li>
-            <li className="text-base font-normal lg:text-md px-3"><a href="">Benefícios</a></li>
-            <li className="text-base font-normal lg:text-md px-3"><a href="">Sobre cartão</a></li>
-            <li className="text-base font-normal lg:text-md px-3"><a href="">Sobre Nós</a></li>
-            <li className="text-base font-normal lg:text-md px-3"><a href="">Ajuda</a></li>
-            <li className="text-base font-normal lg:text-md px-3"><a href="">Blog</a></li>
+        <nav className="hidden h-full w-6/12 lg:flex lg:items-center lg:justify-center lg:w-8/12 overflow-hidden">
+           <ul className="flex h-full items-center gap-2">
+            {links.map(({ label, href }) => {
+              const isActive = pathname === href || (href.includes('#') && pathname === '/');
+              return (
+                <li key={href} 
+                  className={`${isActive ? 'min-w-[120px]' : 'hover:text-blue-400'} relative h-full items-center justify-center transition flex text-base font-normal lg:text-md px-3`}
+                >
+                  {isActive && (
+                    // <motion.div
+                    //   layoutId="highlight-shape"
+                    //   layout="position"
+                    //   className="shape absolute z-0"
+                    //   transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                    // />
+                    <div className='absolute'>
+                      <motion.div
+                        layoutId="highlight-shape"
+                        layout="position"
+                        className="parallelogram-container absolute z-0"
+                        transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                      >
+                        <div className="parallelogram"></div>
+                      </motion.div>
+                    </div>
+                  )}
+                  <Link href={href} className='z-10'>{label}</Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
          <div className="w-full gap-6 lg:w-2/12 flex justify-end items-center">
-          {/* Botão hambúrguer só aparece em telas menores */}
            <div className="">
             <button 
               className="flex items-center justify-center py-4 px-4 bg-gray-950 text-white text-sm xl:text-lg xl:px-6 rounded-lg"
@@ -54,13 +90,19 @@ export default function Header() {
           </button>
           
             {menuOpen && (
-              <div className="absolute top-20 left-0 w-full bg-white text-black flex flex-col items-center gap-4 py-6 z-50 lg:hidden shadow-md">
-                <a href="/Products" className="menuItem">Produtos</a>
-                <a href="" className="menuItem">Benefícios</a>
-                <a href="" className="menuItem">Sobre cartão</a>
-                <a href="" className="menuItem">Sobre Nós</a>
-                <a href="" className="menuItem">Ajuda</a>
-                <a href="" className="menuItem">Blog</a>
+              <div className="absolute top-18 left-0 w-full bg-white text-black flex flex-col items-center gap-4 py-6 z-50 lg:hidden shadow-md">
+                {links.map(({ label, href }) => {
+                  const isActive = pathname === href || (href.includes('#') && pathname === '/');
+                  return (
+                    <Link
+                      key={href}
+                      href={href}
+                      className={`menuItem ${isActive ? 'font-semibold bg-[#FFA415]' : ''} w-full text-center`}
+                    >
+                      {label}
+                    </Link>
+                  );
+                })}
               </div>
             )}
         </div>

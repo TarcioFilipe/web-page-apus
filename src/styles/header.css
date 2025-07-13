@@ -3,9 +3,29 @@
   font-size: 24px;
 }
 
-.logo {
+.shape {
+  width: 120px;
+  height: 80px;
+  transform: skew(20deg);
+  background: orange;
 
 }
+
+.parallelogram-container {
+  width: 120px;
+  height: 120px;
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa as bordas */
+  position: relative; /* Necessário para posicionar o paralelogramo */
+}
+
+.parallelogram {
+  width: 100%;
+  height: 100%;
+  background-color: #FFA415;
+  transform: rotate(10deg) scaleX(1.1); /* Ajuste o ângulo e o fator de escala conforme necessário */
+  transform-origin: bottom left; /* Define o ponto de origem da transformação */
+}
+
 @media(min-width: 1440px) {
   .logo {
     max-width: 300px;
