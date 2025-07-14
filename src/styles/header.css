@@ -11,6 +11,12 @@
 
 }
 
+.logoPosition {
+  top: 50%;
+  bottom: 50%;
+  transform: translateY(-50%);
+}
+
 .parallelogram-container {
   width: 120px;
   height: 120px;
