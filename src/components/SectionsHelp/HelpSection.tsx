@@ -27,7 +27,7 @@ export default function HelpSection() {
   const [expanded, setExpanded] = useState<number | null>(null)
 
   return (
-    <section className="relative h-screen w-full flex flex-col items-center justify-center bg-white text-black py-20 overflow-hidden">
+    <section className="relative min-h-screen w-full flex flex-col items-center justify-center bg-white text-black py-20 overflow-hidden">
       <div className="container flex flex-col h-full justify-center px-4 lg:pt-10">
         <motion.div 
           initial={{ opacity: 0, y: 60 }}
@@ -90,8 +90,8 @@ export default function HelpSection() {
         </motion.div>
 
 
-        <p className="text-center text-3xl lg:text-4xl/12 2xl:text-5xl/14 font-black z-10">
-          Entre emcontato conosco
+        <p className="text-center text-3xl font-black z-10 mt-4 lg:text-4xl/12 2xl:text-5xl/14">
+          Entre em contato conosco
         </p>
 
         <div className='arrowBottom absolute  w-[400px] h-[400px] lg:w-[800px] lg:h-[800px]'>

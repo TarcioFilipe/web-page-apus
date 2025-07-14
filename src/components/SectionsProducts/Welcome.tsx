@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function Welcome() {
   return(
-    <section className="h-screen imageElement w-full flex flex-col items-center bg-white text-black pt-18 overflow-hidden">
+    <section className="h-screen imageElement w-full flex flex-col items-center bg-white text-black pt-18 lg:mt-18 overflow-hidden">
       <motion.div
         initial={{ opacity: 0}}
         animate={{ opacity: 1 }}
@@ -16,9 +16,9 @@ export default function Welcome() {
         <div className='arrowElement absolute w-[400px] h-[400px] lg:w-[800px] lg:h-[800px]' >
           <Image src="/images/arraow_right.png" alt='Arrow right' fill objectFit='cover'/>
         </div>
-        <div className='flex w-10/12 h-[50%] lg:w-6/12'>
+        <div className='flex flex-col w-10/12 h-[50%] lg:w-6/12'>
+          <h2 className='block text-3xl lg:text-4xl/12 2xl:text-5xl/14 font-black mb-1'>Conheça</h2>
           <p className='text-3xl lg:text-4xl/12 2xl:text-5xl/14 font-black mb-4'>
-            Conheça
             nossos produtos
           </p>
         </div>

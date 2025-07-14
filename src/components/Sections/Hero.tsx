@@ -12,13 +12,13 @@ export default function Hero() {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 1024); // lg = 1024px
+      setIsMobile(window.innerWidth < 1024);
     };
 
-    checkScreenSize(); // inicial
-    window.addEventListener('resize', checkScreenSize); // escuta resize
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
 
-    return () => window.removeEventListener('resize', checkScreenSize); // limpa
+    return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 
   return (
@@ -44,7 +44,7 @@ export default function Hero() {
             em milhares de estabelecimentos
             espalhados pelo País.
           </p>
-          <PrimaryButton onClick={() => console.log('clicado')}>
+          <PrimaryButton onClick={() => console.log('clicado')} className="hover:bg-zinc-800">
             Saiba Mais
           </PrimaryButton>
         </motion.div>
@@ -62,7 +62,7 @@ export default function Hero() {
               src="/images/cartao_capa.png"
               alt="Imagem do cartao"
               fill={true}
-              objectFit="cover"
+              className="object-cover"
             />
           </div>
         </motion.div>

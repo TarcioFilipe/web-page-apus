@@ -15,30 +15,32 @@ export default function SaqueFacil() {
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col items-center text-center lg:text-left lg:w-6/12 lg:items-start"
+          className="flex flex-col items-center text-center lg:text-left lg:w-8/12 lg:items-start"
         >
-          <p className="text-3xl lg:text-4xl/12 2xl:text-5xl/14 font-black mb-4">
+          <p className="text-3xl lg:text-4xl/12 2xl:text-5xl/14 font-black mb-1">
             Saque-Fácil: dinheiro na mão,
             na hora em que você precisar
+          </p>
+          <p className="text-3xl font-bold mb-4 lg:text-2xl">
             Crédito em conta em até 24 horas
             úteis, de forma simples e fácil.
           </p>
           <ul className="">
             <li className="flex justify-center lg:justify-start">
-              <p className="font-light text-md w-10/12 lg:text-lg lg:w-full xl:text-2xl text-zinc-800 mb-6">
+              <p className="font-light text-md w-10/12 xl:text-lg text-zinc-800 mb-6">
                 Pagamento parcelado.
                 Juros atrativos.
                 Solicite no App, ou lojas físicas.
               </p>
             </li>
             <li className="flex justify-center lg:justify-start">
-              <p className="font-light text-md w-10/12 lg:text-lg lg:w-full xl:text-2xl text-zinc-800 mb-6">
+              <p className="font-light text-md w-10/12 xl:text-lg text-zinc-800 mb-6">
                 Sujeito à análise de crédito, disponibilidade de
                 limite e de margem consignável.
               </p>
             </li>
             <li className="flex justify-center lg:justify-start">
-              <p className="font-light text-md w-10/12 lg:text-lg lg:w-full xl:text-2xl text-zinc-800 mb-6">
+              <p className="font-light text-md w-10/12 xl:text-lg text-zinc-800 mb-6">
                 Evite o superendividamento, contrate saques
                 sempre de acordo com suas condições financeiras
               </p>
@@ -46,7 +48,7 @@ export default function SaqueFacil() {
           </ul>
 
           <div className="flex flex-col items-center lg:flex-row lg:gap-4">
-            <PrimaryButton onClick={() => console.log('clicado')} className="flex flex-row items-center justify-center gap-2 cursor-pointer xl:text-2xl xl:h-16 hover:bg-zinc-800">
+            <PrimaryButton onClick={() => console.log('clicado')} className="flex flex-row items-center justify-center gap-2 cursor-pointer xl:text-lg xl:h-16 hover:bg-zinc-800">
               Fale conosco 
               <FaWhatsapp />
             </PrimaryButton>
@@ -63,7 +65,7 @@ export default function SaqueFacil() {
           </div>
         </motion.div>
 
-        <div className="flex w-6/12 h-full bg-red">
+        <div className="flex w-4/12 h-full bg-red">
           <div className="w-4 h-4">
 
           </div>
