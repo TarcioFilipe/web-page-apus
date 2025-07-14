@@ -23,7 +23,7 @@ export default function CardApus() {
           transition={{ duration: 1 }}
           className="container flex flex-col text-center px-4 py-10 items-center lg:items-start lg:text-start lg:w-7/12"
         >
-          <p className="text-3xl lg:text-4xl/12 lg:w-11/12 xl:mb-6 2xl:text-5xl/14 font-black mb-4">
+          <p className="text-3xl text-white lg:text-4xl/12 lg:w-11/12 xl:mb-6 2xl:text-5xl/14 font-black mb-4">
             Com o cartão APUS digital
             recheado de benefícios
             você acontece

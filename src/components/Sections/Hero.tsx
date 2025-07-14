@@ -22,7 +22,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col bg-white text-black items-center">
+    <section className="min-h-screen flex flex-col bg-white text-black items-center justify-center ">
       <div className="min-h-18 w-full"></div>
       <motion.div 
         className={`${!isMobile && 'element'} flex h-full flex-col justify-center container items-center mb-12 lg:flex-row`}

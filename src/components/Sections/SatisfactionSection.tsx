@@ -4,7 +4,7 @@ import '@/styles/satisfaction.css'
 
 export default function SatisfactionSection() {
   return (
-    <section className="relative h-screen w-full flex flex-col pt-20 bg-white items-center text-black overflow-hidden">
+    <section className="relative w-full flex flex-col pt-20 bg-white items-center text-black overflow-hidden">
       <Image  
         src="/images/arraow_right.png"
         alt="Imagem do cartao"
@@ -12,8 +12,8 @@ export default function SatisfactionSection() {
         height={400}
         className="arrow"
       />
-      <div className="flex flex-col container w-full h-full lg:flex-row">
-        <div className="flex flex-col w-full h-[40%] lg:h-full lg:justify-center lg:w-5/12">
+      <div className="flex flex-col container w-full h-full z-10 lg:flex-row">
+        <div className="flex flex-col w-full h-[40%] lg:h-full lg:justify-center lg:self-center lg:w-5/12">
           <motion.div
             initial={{ opacity: 0, y: 60}}
             whileInView={{ opacity: 1, y: 0}}
@@ -39,7 +39,7 @@ export default function SatisfactionSection() {
             initial={{ opacity: 0, y: 40}}
             whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            className="image-casal h-full w-full flex flex-col items-end overflow-hidden"
+            className="image-casal h-full w-full flex flex-col items-end overflow-hidden min-h-[400px] md:min-h-[500px] lg:min-h-[620px] xl:min-h-[800px]"
           >
           </motion.div>
         </div>

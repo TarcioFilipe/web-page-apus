@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function VideoSection() {
   return (
-    <section className="min-h-screen flex flex-col items-center bg-white py-20">
+    <section className="min-h-screen flex flex-col items-center bg-white py-20 lg:min-h-full">
       <div className="container">
         <div className="max-w-5xl mx-auto h-full px-4 text-center justify-center">
           <motion.h2
