@@ -23,7 +23,7 @@ export default function FaqSection() {
   const [expanded, setExpanded] = useState<number | null>(null)
 
   return (
-    <section className="h-screen w-full flex flex-col items-center bg-white text-black py-20">
+    <section className="min-h-screen w-full flex flex-col items-center bg-white text-black py-20">
       <div className="container flex flex-col px-4">
         <motion.div 
           initial={{ opacity: 0, y: 60 }}

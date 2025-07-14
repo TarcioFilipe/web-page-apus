@@ -21,7 +21,7 @@ export default function SecuritySection() {
   const rotateY = useTransform(scrollYProgress, [0, 1], [90, 0]);
   
   return (
-    <section ref={sectionRef} className="h-screen flex flex-col bg-white text-black items-center">
+    <section ref={sectionRef} className="min-h-screen flex flex-col bg-white text-black items-center">
       <motion.div 
         className={`flex h-full flex-col justify-center container items-center mb-12 lg:flex-row`}
         initial={{ opacity: 0}}

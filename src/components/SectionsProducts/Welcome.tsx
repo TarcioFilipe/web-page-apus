@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function Welcome() {
   return(
-    <section className="h-screen imageElement w-full flex flex-col items-center bg-white text-black pt-18 lg:mt-18 overflow-hidden">
+    <section className="h-screen imageElement w-full flex flex-col items-center bg-white text-black pt-18 mt-18 overflow-hidden">
       <motion.div
         initial={{ opacity: 0}}
         animate={{ opacity: 1 }}

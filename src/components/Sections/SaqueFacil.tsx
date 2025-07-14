@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function SaqueFacil() {
   return (
-    <section className="image-idosos h-screen flex flex-col justify-center items-center bg-white text-black py-20">
+    <section className="image-idosos min-h-screen flex flex-col justify-center items-center bg-white text-black py-20">
       <div className="container flex flex-col lg:flex-row lg:px-4">
         <motion.div 
           initial={{ opacity: 0, y: 60 }}
