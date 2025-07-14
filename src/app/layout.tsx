@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ModalProvider } from "@/context/ModalContext";
+import ModalContato from "@/components/ModalForm";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,9 +33,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <main className="flex flex-col">
-          <Header/>
-          {children}
-          <Footer/>
+          <ModalProvider>
+            <Header/>
+            {children}
+            <Footer/>
+            <ModalContato />
+            <Toaster position="top-center" reverseOrder={false} />
+          </ModalProvider>
         </main>
       </body>
     </html>

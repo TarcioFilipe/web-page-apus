@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
+
 
 import '@/styles/benefits.css';
 import Icon from '@mdi/react';
@@ -17,6 +17,12 @@ const items = [
   { id: 2, icon: mdiGiftOutline, title: 'Clube de Vantagens' },
   { id: 3, icon: mdiShareVariantOutline, title: 'Produtos Agregados' },
 ];
+
+const pagination = {
+  clickable: true,
+  bulletClass: 'swiper-pagination-bullet custom-bullet',
+  bulletActiveClass: 'swiper-pagination-bullet-active custom-bullet-active',
+};
 
 export default function BenefitsSection() {
   return (
@@ -43,9 +49,9 @@ export default function BenefitsSection() {
               modifier: 1,
               slideShadows: false,
             }}
-            pagination={true}
+            pagination={pagination}
             modules={[EffectCoverflow, Pagination]}
-            className="mySwiper"
+            className="mySwiper custom-swiper"
           >
             {items.map((item) => (
               <SwiperSlide key={item.id} className="tranding-slide  rounded-xl shadow-md">

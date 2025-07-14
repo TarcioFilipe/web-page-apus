@@ -25,16 +25,30 @@
 
   box-sizing: border-box;
 
-  /* display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center; */
   transition: all 0.2s ease-in;
+}
+
+.custom-bullet {
+  background-color: #CE7500;
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  margin: 0 6px !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease;
+}
+
+.custom-bullet-active {
+  background-color: #fff !important; 
+  transform: scale(1.2);
+}
+
+.custom-swiper .swiper-pagination {
+  bottom: -32px;
+  gap: 16px;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
 @media (max-width: 640px) {

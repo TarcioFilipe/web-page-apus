@@ -46,7 +46,7 @@ export default function SaqueFacil() {
           </ul>
 
           <div className="flex flex-col items-center lg:flex-row lg:gap-4">
-            <PrimaryButton onClick={() => console.log('clicado')} className="flex flex-row items-center justify-center gap-2 xl:text-2xl xl:h-16">
+            <PrimaryButton onClick={() => console.log('clicado')} className="flex flex-row items-center justify-center gap-2 cursor-pointer xl:text-2xl xl:h-16 hover:bg-zinc-800">
               Fale conosco 
               <FaWhatsapp />
             </PrimaryButton>

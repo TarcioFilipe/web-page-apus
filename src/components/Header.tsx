@@ -7,9 +7,10 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import '@/styles/header.css';
+import { useModal } from '@/context/ModalContext';
 
 export default function Header() {
-  console.log('renderiza')
+  const { openModal } = useModal();
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -45,12 +46,6 @@ export default function Header() {
                   className={`${isActive ? 'min-w-[120px]' : 'hover:text-blue-400'} relative h-full items-center justify-center transition flex text-base font-normal lg:text-md px-3`}
                 >
                   {isActive && (
-                    // <motion.div
-                    //   layoutId="highlight-shape"
-                    //   layout="position"
-                    //   className="shape absolute z-0"
-                    //   transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-                    // />
                     <div className='absolute'>
                       <motion.div
                         layoutId="highlight-shape"
@@ -72,8 +67,8 @@ export default function Header() {
          <div className="w-full gap-6 lg:w-2/12 flex justify-end items-center">
            <div className="">
             <button 
-              className="flex items-center justify-center py-4 px-4 bg-gray-950 text-white text-sm xl:text-lg xl:px-6 rounded-lg"
-              onClick={() => console.log('Abrir a conta')}
+              className="flex items-center justify-center py-4 px-4 bg-gray-950 text-white text-sm rounded-lg cursor-pointer xl:text-lg xl:px-6 hover:bg-zinc-800"
+              onClick={openModal}
             >
               Abrir minha conta
             </button>

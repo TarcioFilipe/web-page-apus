@@ -56,7 +56,7 @@ export default function SecuritySection() {
             realizações pessoais. Confira o que preparamos
             para você.
           </p>
-          <button className="bg-black text-white font-semibold px-6 py-2 xl:py-4 xl:px-12 rounded-lg hover:bg-gray-100 transition">
+          <button className="bg-black text-white font-semibold px-6 py-2 xl:py-4 xl:px-12 rounded-lg cursor-pointer hover:bg-zinc-800 transition">
             Ver agora
           </button>
         </motion.div>
@@ -69,13 +69,13 @@ export default function SecuritySection() {
         >
           <motion.div 
             style={{ rotateY }}
-            className={`relative flex w-full h-[380px] 
-              lg:w-[550px] lg:h-[450px] 
-              xl:w-full xl:h-[600px]`
+            className={`relative flex w-full h-[500px] 
+              lg:w-[700px] lg:h-[600px] 
+              xl:w-full xl:h-[800px]`
             }
           >
             <Image  
-              src="/images/celular_rotate.png"
+              src="/images/appApus.png"
               alt="Celular image"
               fill={true}
               objectFit="contain"
