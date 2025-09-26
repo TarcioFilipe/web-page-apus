@@ -6,22 +6,10 @@ import { useRef } from "react";
 
 import Image from "next/image";
 import '@/styles/securityScreen.css'
+import { useModal } from "@/context/ModalContext";
 
 export default function SecuritySection() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 1024);
-    };
-
-    checkScreenSize(); 
-    window.addEventListener('resize', checkScreenSize);
-
-    return () => window.removeEventListener('resize', checkScreenSize);
-  }, []);
-
-  
+  const { openModal } = useModal();
   const sectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -33,7 +21,7 @@ export default function SecuritySection() {
   const rotateY = useTransform(scrollYProgress, [0, 1], [90, 0]);
   
   return (
-    <section ref={sectionRef} className="h-screen flex flex-col bg-white text-black items-center">
+    <section ref={sectionRef} className="min-h-screen flex flex-col bg-white text-black items-center">
       <motion.div 
         className={`flex h-full flex-col justify-center container items-center mb-12 lg:flex-row`}
         initial={{ opacity: 0}}
@@ -43,7 +31,6 @@ export default function SecuritySection() {
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
-          // animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="flex flex-col text-center px-4 py-4 items-center lg:items-start lg:text-start lg:w-6/12"
         >
@@ -56,7 +43,7 @@ export default function SecuritySection() {
             realizações pessoais. Confira o que preparamos
             para você.
           </p>
-          <button className="bg-black text-white font-semibold px-6 py-2 xl:py-4 xl:px-12 rounded-lg cursor-pointer hover:bg-zinc-800 transition">
+          <button className="bg-black text-white font-semibold px-6 py-2 xl:py-4 xl:px-12 rounded-lg cursor-pointer hover:bg-zinc-800 transition" onClick={openModal}>
             Ver agora
           </button>
         </motion.div>

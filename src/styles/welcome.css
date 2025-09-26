@@ -7,8 +7,14 @@
 
 .arrowElement {
   bottom: -130px;
-  left: -228px;
+  left: -300px;
   transform: rotate(49deg);
+}
+
+@media(min-width: 900px) {
+  .arrowElement {
+    left: -350px;
+  }
 }
 
 @media(min-width: 1024px) {

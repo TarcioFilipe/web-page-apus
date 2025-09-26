@@ -1,14 +1,16 @@
 'use client'
 
 import { useModal } from '@/context/ModalContext';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import toast from 'react-hot-toast';
 
 
 import '@/styles/modalForm.css';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export default function ModalContato() {
+  const modalRef = useRef<HTMLDivElement>(null);
   const { isOpen, closeModal } = useModal();
 
   const [loading, setLoading] = useState(false);
@@ -21,6 +23,22 @@ export default function ModalContato() {
     termo1: false,
     termo2: false
   });
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+        closeModal();
+      }
+    };
+  
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+  
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen, closeModal]);
 
   useEffect(() => {
     const saved = localStorage.getItem('formData');
@@ -99,103 +117,113 @@ export default function ModalContato() {
     }
   };
 
-  if (!isOpen) return null;
-
   return (
-    <div className="fixed inset-0 flex justify-center items-center z-50 bg-amber-500/25 backdrop-blur-sm">
-      <div className="bg-[#FFA415] rounded-xl px-6 py-8 w-full max-w-lg shadow-xl relative text-black">
-        <button onClick={closeModal} className="absolute top-3 right-4 text-2xl cursor-pointer hover:text-white transition">×</button>
-        <h2 className="text-2xl font-bold mb-1">Abra sua conta</h2>
-        <p className="text-lg mb-6">em segundos</p>
-
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <input
-            name="nome"
-            type="text"
-            placeholder="Nome completo"
-            value={formData.nome}
-            onChange={handleChange}
-            className="bg-white p-2 px-5 rounded-full"
-            required
-          />
-
-          <div className='flex gap-2'>
-            <input
-              name="cpf"
-              type="text"
-              placeholder="CPF"
-              value={formData.cpf}
-              onChange={handleChange}
-              className="bg-white p-2 px-5 rounded-full w-7/12"
-              required
-            />
-            <input
-              name="nascimento"
-              type="date"
-              value={formData.nascimento}
-              onChange={handleChange}
-              className="bg-white p-2 px-4 rounded-full w-5/12"
-              required
-            />
-          </div>
-
-          <input
-            name="email"
-            type="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleChange}
-            className="bg-white p-2 px-5 rounded-full"
-            required
-          />
-
-          <input
-            name="telefone"
-            type="tel"
-            placeholder="Telefone"
-            value={formData.telefone}
-            onChange={handleChange}
-            className="bg-white p-2 px-5 rounded-full"
-            required
-          />
-
-          <div className="flex flex-col gap-2 text-sm">
-            <label className="flex items-start gap-2">
-              <input
-                type="checkbox"
-                name="termo1"
-                checked={formData.termo1}
-                onChange={handleChange}
-                className="border mt-1 bg-[#FFA415]"
-              />
-              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</span>
-            </label>
-
-            <label className="flex items-start gap-2">
-              <input
-                type="checkbox"
-                name="termo2"
-                checked={formData.termo2}
-                onChange={handleChange}
-                className="mt-1"
-              />
-              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</span>
-            </label>
-          </div>
-
-          <button
-            type="submit"
-            className="bg-white text-black text-center mt-2 py-3 rounded-full font-medium text-lg cursor-pointer hover:bg-black hover:text-white transition flex justify-center items-center gap-2"
-            disabled={loading}
+    <AnimatePresence>
+      {isOpen && (
+        <div className="fixed inset-0 flex justify-center items-center z-50 bg-amber-500/25 backdrop-blur-sm">
+          <motion.div 
+            ref={modalRef} 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.25 }}
+            className="bg-[#FFA415] rounded-xl px-6 py-8 w-full mx-4 max-w-lg shadow-xl relative text-black sm:mx-0"
           >
-            {loading ? (
-              <div className="h-5 w-5 border-2 border-black border-t-transparent rounded-full animate-spin" />
-            ) : (
-              'Confirmar'
-            )}
-          </button>
-        </form>
-      </div>
-    </div>
+            <button onClick={closeModal} className="absolute top-3 right-4 text-2xl cursor-pointer hover:text-white transition">×</button>
+            <h2 className="text-2xl font-bold mb-1">Abra sua conta</h2>
+            <p className="text-lg mb-6">em segundos</p>
+
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <input
+                name="nome"
+                type="text"
+                placeholder="Nome completo"
+                value={formData.nome}
+                onChange={handleChange}
+                className="bg-white p-2 px-5 rounded-full"
+                required
+              />
+
+              <div className='flex gap-2'>
+                <input
+                  name="cpf"
+                  type="text"
+                  placeholder="CPF"
+                  value={formData.cpf}
+                  onChange={handleChange}
+                  className="bg-white p-2 px-5 rounded-full w-7/12"
+                  required
+                />
+                <input
+                  name="nascimento"
+                  type="date"
+                  value={formData.nascimento}
+                  onChange={handleChange}
+                  className="bg-white p-2 px-4 rounded-full w-5/12"
+                  required
+                />
+              </div>
+
+              <input
+                name="email"
+                type="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                className="bg-white p-2 px-5 rounded-full"
+                required
+              />
+
+              <input
+                name="telefone"
+                type="tel"
+                placeholder="Telefone"
+                value={formData.telefone}
+                onChange={handleChange}
+                className="bg-white p-2 px-5 rounded-full"
+                required
+              />
+
+              <div className="flex flex-col gap-2 text-sm">
+                <label className="flex items-start gap-2">
+                  <input
+                    type="checkbox"
+                    name="termo1"
+                    checked={formData.termo1}
+                    onChange={handleChange}
+                    className="border mt-1 bg-[#FFA415]"
+                  />
+                  <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</span>
+                </label>
+
+                <label className="flex items-start gap-2">
+                  <input
+                    type="checkbox"
+                    name="termo2"
+                    checked={formData.termo2}
+                    onChange={handleChange}
+                    className="mt-1"
+                  />
+                  <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</span>
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                className="bg-white text-black text-center mt-2 py-3 rounded-full font-medium text-lg cursor-pointer hover:bg-black hover:text-white transition flex justify-center items-center gap-2"
+                disabled={loading}
+              >
+                {loading ? (
+                  <div className="h-5 w-5 border-2 border-black border-t-transparent rounded-full animate-spin" />
+                ) : (
+                  'Confirmar'
+                )}
+              </button>
+            </form>
+          </motion.div>
+        </div>
+      )}
+    </AnimatePresence>
+
   );
 }

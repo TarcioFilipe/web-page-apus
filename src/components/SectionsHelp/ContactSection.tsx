@@ -49,7 +49,7 @@ const info = [
 
 export default function ContactSection() {
   return (
-    <section className="h-screen flex flex-col items-center bg-[#FFA415] text-black py-10">
+    <section className="min-h-screen flex flex-col items-center bg-[#FFA415] text-black py-10">
       <div className="container flex flex-col h-full justify-center px-4 gap-4">
         {info.map((item, index) => (
           <div key={index} className="flex flex-col gap-1">

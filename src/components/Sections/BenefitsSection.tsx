@@ -26,7 +26,7 @@ const pagination = {
 
 export default function BenefitsSection() {
   return (
-    <section className="h-screen flex flex-col items-center bg-[#FFA415] text-black z-10 py-20">
+    <section className="min-h-screen flex flex-col items-center bg-[#FFA415] text-black z-10 py-20">
       <div className='flex flex-col container w-full h-full items-center justify-center'>
         <p className='text-center xl:max-w-6xl text-3xl lg:text-4xl/12 2xl:text-5xl/14 font-black mb-4'>
           O cartão de benefícios especialista em resolver. Entenda por que o Apus digital é considerado o melhor:
